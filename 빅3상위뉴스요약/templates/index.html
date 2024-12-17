@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NEWS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: #f4f4f4;
+            max-width: 1200px; /* 최대 너비 설정 */
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            text-align: center;
+            font-size: 30px; 
+        }
+        .date {
+            color: #000; 
+            margin-top: 10px; 
+            font-size: 20px; 
+            float: right;
+        }
+        h3 {
+            color: #0056b3;
+            margin-top: 30px;            
+            font-size: 20px; 
+        }
+        p {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        t1 {
+            font-weight: bold;
+            color: #333;
+            font-size: 20px; 
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .summary {
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h2>빅 3 상위 뉴스 요약</h2>
+    <h3 class="date">date : {{result[1]}}</h3>
+    <form action="/" method="get">
+    </form>
+    {% if result is not none %}
+        <h3>1. 동아일보</h3>
+        <p>
+            <t1> 제목 : {{result[0][0]['title']}}   <br>
+                 요약 : {{result[0][0]['summary']}} </t1><br>
+        </p>
+        <p>
+            <t1> 제목 : {{result[0][1]['title']}}   <br>
+                 요약 : {{result[0][1]['summary']}} </t1><br>
+        </p>
+        <p>
+            <t1> 제목 : {{result[0][2]['title']}}   <br>
+                 요약 : {{result[0][2]['summary']}} </t1><br>
+        </p>
+        <h3>2. 중앙일보</h3>
+        <p>
+            <t1> 제목 : {{result[0][3]['title']}}   <br>
+                 요약 : {{result[0][3]['summary']}} </t1><br>
+        </p>
+        <p>
+            <t1> 제목 : {{result[0][4]['title']}}   <br>
+                 요약 : {{result[0][4]['summary']}} </t1><br>
+        </p>
+        <p>
+            <t1> 제목 : {{result[0][5]['title']}}   <br>
+                 요약 : {{result[0][5]['summary']}} </t1><br>
+        </p>
+        <h3>3. 한겨례</h3>
+        <p>
+            <t1> 제목 : {{result[0][6]['title']}}   <br>
+                 요약 : {{result[0][6]['summary']}} </t1><br>
+        </p>
+        <p>
+            <t1> 제목 : {{result[0][7]['title']}}   <br>
+                 요약 : {{result[0][7]['summary']}} </t1><br>
+        </p>
+        <p>
+            <t1> 제목 : {{result[0][8]['title']}}   <br>
+                 요약 : {{result[0][8]['summary']}} </t1><br>
+        </p>
+    {% endif %}
+</body>
+</html>
+
+
